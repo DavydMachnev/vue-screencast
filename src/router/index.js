@@ -14,7 +14,7 @@ const routes = [
   {
     path: '/video/:id',
     name: 'video-watch',
-    params: true,
+    props: true,
     component: VideoWatch,
   },
 ];

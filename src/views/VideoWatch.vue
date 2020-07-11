@@ -20,9 +20,14 @@ export default {
   components: {
     appVideoPlayer: videoPlayer,
   },
+  data() {
+    return {
+      id: this.$route.params.id
+    }
+  },
   computed: {
     video() {
-      return this.$store.state.videos.find((vid) => vid.id === this.$route.params.id);
+      return this.$store.state.videos.find((vid) => vid.id === Number(this.id));
     },
     playerOptions() {
       return {
